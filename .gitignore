@@ -1,1 +1,8 @@
 .DS_Store
+xcuserdata/
+*.xcuserstate
+
+# note: add the following if using CocoaPods dependency manager
+Podfile
+Podfile.lock
+Pods
