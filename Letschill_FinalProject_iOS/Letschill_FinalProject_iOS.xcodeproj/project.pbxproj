@@ -13,9 +13,14 @@
 		820972DF21B6564200EEF992 /* Letschill_FinalProject_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 820972DD21B6564200EEF992 /* Letschill_FinalProject_iOS.xcdatamodeld */; };
 		820972E121B6564300EEF992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820972E021B6564300EEF992 /* Assets.xcassets */; };
 		820972E421B6564300EEF992 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820972E221B6564300EEF992 /* LaunchScreen.storyboard */; };
+		820972ED21B75B1B00EEF992 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820972EB21B75B1A00EEF992 /* FBSDKCoreKit.framework */; };
+		820972EE21B75B1B00EEF992 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820972EC21B75B1B00EEF992 /* FBSDKLoginKit.framework */; };
+		820972F021B75B4000EEF992 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820972EF21B75B4000EEF992 /* FBSDKShareKit.framework */; };
+		BA4D0C68B0561A0538D45856 /* Pods_Letschill_FinalProject_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AC358CE0416861C776411D /* Pods_Letschill_FinalProject_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AD46CB1B2CDC246F8C2AB01 /* Pods-Letschill_FinalProject_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Letschill_FinalProject_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Letschill_FinalProject_iOS/Pods-Letschill_FinalProject_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		820972D321B6564200EEF992 /* Letschill_FinalProject_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letschill_FinalProject_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		820972D621B6564200EEF992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		820972D821B6564200EEF992 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		820972E021B6564300EEF992 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820972E321B6564300EEF992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820972E521B6564300EEF992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820972EB21B75B1A00EEF992 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		820972EC21B75B1B00EEF992 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		820972EF21B75B4000EEF992 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		98AC358CE0416861C776411D /* Pods_Letschill_FinalProject_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Letschill_FinalProject_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A06A3842074367EC0538C0C1 /* Pods-Letschill_FinalProject_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Letschill_FinalProject_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Letschill_FinalProject_iOS/Pods-Letschill_FinalProject_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820972EE21B75B1B00EEF992 /* FBSDKLoginKit.framework in Frameworks */,
+				820972ED21B75B1B00EEF992 /* FBSDKCoreKit.framework in Frameworks */,
+				820972F021B75B4000EEF992 /* FBSDKShareKit.framework in Frameworks */,
+				BA4D0C68B0561A0538D45856 /* Pods_Letschill_FinalProject_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +56,11 @@
 			children = (
 				820972D521B6564200EEF992 /* Letschill_FinalProject_iOS */,
 				820972D421B6564200EEF992 /* Products */,
+				820972EF21B75B4000EEF992 /* FBSDKShareKit.framework */,
+				820972EB21B75B1A00EEF992 /* FBSDKCoreKit.framework */,
+				820972EC21B75B1B00EEF992 /* FBSDKLoginKit.framework */,
+				E34E68D09A805C4C94A33E3A /* Pods */,
+				EE31CF989108DBBD83384A6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,23 @@
 			path = Letschill_FinalProject_iOS;
 			sourceTree = "<group>";
 		};
+		E34E68D09A805C4C94A33E3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A06A3842074367EC0538C0C1 /* Pods-Letschill_FinalProject_iOS.debug.xcconfig */,
+				6AD46CB1B2CDC246F8C2AB01 /* Pods-Letschill_FinalProject_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE31CF989108DBBD83384A6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98AC358CE0416861C776411D /* Pods_Letschill_FinalProject_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 820972E821B6564300EEF992 /* Build configuration list for PBXNativeTarget "Letschill_FinalProject_iOS" */;
 			buildPhases = (
+				E51F86242156FFAA570A8C3A /* [CP] Check Pods Manifest.lock */,
 				820972CF21B6564200EEF992 /* Sources */,
 				820972D021B6564200EEF992 /* Frameworks */,
 				820972D121B6564200EEF992 /* Resources */,
+				F99F990FFF92DCEA07BE5803 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +170,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E51F86242156FFAA570A8C3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Letschill_FinalProject_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99F990FFF92DCEA07BE5803 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Letschill_FinalProject_iOS/Pods-Letschill_FinalProject_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Letschill_FinalProject_iOS/Pods-Letschill_FinalProject_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		820972CF21B6564200EEF992 /* Sources */ = {
@@ -221,6 +314,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -275,6 +369,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -284,10 +379,15 @@
 		};
 		820972E921B6564300EEF992 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06A3842074367EC0538C0C1 /* Pods-Letschill_FinalProject_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MYLQWYYN25;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Letschill_FinalProject_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,10 +402,15 @@
 		};
 		820972EA21B6564300EEF992 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AD46CB1B2CDC246F8C2AB01 /* Pods-Letschill_FinalProject_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MYLQWYYN25;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Letschill_FinalProject_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

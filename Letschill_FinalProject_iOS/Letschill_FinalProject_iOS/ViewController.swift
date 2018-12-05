@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let loginButton = FBSDKLoginButton()
+        
+        //ref = Database.database().reference()
+        //storeRef = Storage.storage().reference()
+        
+        
+        
+        view.addSubview(loginButton)
+        loginButton.center = self.view.center;
+        loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 28)
     }
 
 
