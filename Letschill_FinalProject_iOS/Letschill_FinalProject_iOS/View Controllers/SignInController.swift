@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInController.swift
 //  Letschill_FinalProject_iOS
 //
 //  Created by Prajwal Ramamurthy on 12/4/18.
@@ -12,7 +12,10 @@ import FBSDKCoreKit
 
 class ViewController: UIViewController {
 
+    // Outlets
     @IBOutlet weak var myCustomFBLoginButton: UIButton!
+    @IBOutlet weak var mTextField_email_signin: UITextField!
+    @IBOutlet weak var mTextField_password_signin: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,10 @@ class ViewController: UIViewController {
         myCustomFBLoginButton.center = self.view.center;
         myCustomFBLoginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 28)
     }
-
-
+    
+    
+    @IBAction func signIn(_ sender: UIButton) {
+        
+    }
 }
 

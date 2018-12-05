@@ -63,6 +63,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIn:" destination="5d6-bZ-FoW" eventType="touchUpInside" id="bv9-27-R8N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-8J-4is">
                                 <rect key="frame" x="28" y="563" width="319" height="39"/>
@@ -148,6 +151,8 @@
                         <viewLayoutGuide key="safeArea" id="VcM-9F-l0U"/>
                     </view>
                     <connections>
+                        <outlet property="mTextField_email_signin" destination="9Wq-9G-b1l" id="KWb-QK-M78"/>
+                        <outlet property="mTextField_password_signin" destination="zSj-Yu-sIO" id="ySm-ec-ec5"/>
                         <outlet property="myCustomFBLoginButton" destination="Ieg-8J-4is" id="fGY-Sf-eWK"/>
                     </connections>
                 </viewController>
@@ -158,7 +163,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="rp8-W8-etA">
             <objects>
-                <viewController id="kZc-mK-z3b" userLabel="Sign Up View Controller" sceneMemberID="viewController">
+                <viewController id="kZc-mK-z3b" userLabel="Sign Up View Controller" customClass="SignUpController" customModule="Letschill_FinalProject_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CD1-u1-ULM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,6 +196,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="kZc-mK-z3b" eventType="touchUpInside" id="9MP-dx-ZL4"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-dv-N6t">
                                 <rect key="frame" x="28" y="252.5" width="319" height="39"/>
@@ -248,6 +256,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1hC-BJ-OHj"/>
                     </view>
+                    <connections>
+                        <outlet property="mTextField_email" destination="WNN-dv-N6t" id="Wsc-0H-5du"/>
+                        <outlet property="mTextField_password" destination="YMH-tN-Lyx" id="fCI-Yv-lpO"/>
+                        <outlet property="mTextField_repeatPassword" destination="UPz-pr-Oba" id="BEY-Ei-hFB"/>
+                        <outlet property="mTextField_username" destination="HOm-Pq-LoY" id="d3c-ni-3nY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tH6-RN-Pl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -673,10 +687,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ImageCreate" width="448.79998779296875" height="270.72000122070312"/>
+        <image name="ImageCreate" width="467" height="282"/>
         <image name="backTransLogin" width="471" height="801"/>
-        <image name="createDefault" width="481.92001342773438" height="290.8800048828125"/>
-        <image name="logo" width="740.8800048828125" height="736.55999755859375"/>
-        <image name="plusButton" width="290.8800048828125" height="294.72000122070312"/>
+        <image name="createDefault" width="502" height="303"/>
+        <image name="logo" width="1543" height="1534"/>
+        <image name="plusButton" width="303" height="307"/>
     </resources>
 </document>
