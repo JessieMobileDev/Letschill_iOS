@@ -16,6 +16,8 @@
 		820972ED21B75B1B00EEF992 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820972EB21B75B1A00EEF992 /* FBSDKCoreKit.framework */; };
 		820972EE21B75B1B00EEF992 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820972EC21B75B1B00EEF992 /* FBSDKLoginKit.framework */; };
 		820972F021B75B4000EEF992 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820972EF21B75B4000EEF992 /* FBSDKShareKit.framework */; };
+		820972FD21B790CF00EEF992 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820972FC21B790CF00EEF992 /* Person.swift */; };
+		820972FF21B790DF00EEF992 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820972FE21B790DF00EEF992 /* Event.swift */; };
 		BA4D0C68B0561A0538D45856 /* Pods_Letschill_FinalProject_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AC358CE0416861C776411D /* Pods_Letschill_FinalProject_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		820972EB21B75B1A00EEF992 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		820972EC21B75B1B00EEF992 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		820972EF21B75B4000EEF992 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		820972FC21B790CF00EEF992 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		820972FE21B790DF00EEF992 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		98AC358CE0416861C776411D /* Pods_Letschill_FinalProject_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Letschill_FinalProject_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06A3842074367EC0538C0C1 /* Pods-Letschill_FinalProject_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Letschill_FinalProject_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Letschill_FinalProject_iOS/Pods-Letschill_FinalProject_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,15 +79,49 @@
 		820972D521B6564200EEF992 /* Letschill_FinalProject_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				820972D621B6564200EEF992 /* AppDelegate.swift */,
-				820972D821B6564200EEF992 /* ViewController.swift */,
-				820972DA21B6564200EEF992 /* Main.storyboard */,
-				820972E021B6564300EEF992 /* Assets.xcassets */,
-				820972E221B6564300EEF992 /* LaunchScreen.storyboard */,
+				820972FA21B7904F00EEF992 /* Data Model */,
+				820972F921B78F3700EEF992 /* Storyboard References */,
+				820972F821B78E3000EEF992 /* View Controllers */,
+				820972FB21B7906D00EEF992 /* Project Files */,
 				820972E521B6564300EEF992 /* Info.plist */,
 				820972DD21B6564200EEF992 /* Letschill_FinalProject_iOS.xcdatamodeld */,
 			);
 			path = Letschill_FinalProject_iOS;
+			sourceTree = "<group>";
+		};
+		820972F821B78E3000EEF992 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				820972D821B6564200EEF992 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		820972F921B78F3700EEF992 /* Storyboard References */ = {
+			isa = PBXGroup;
+			children = (
+				820972DA21B6564200EEF992 /* Main.storyboard */,
+			);
+			path = "Storyboard References";
+			sourceTree = "<group>";
+		};
+		820972FA21B7904F00EEF992 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				820972FC21B790CF00EEF992 /* Person.swift */,
+				820972FE21B790DF00EEF992 /* Event.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		820972FB21B7906D00EEF992 /* Project Files */ = {
+			isa = PBXGroup;
+			children = (
+				820972D621B6564200EEF992 /* AppDelegate.swift */,
+				820972E221B6564300EEF992 /* LaunchScreen.storyboard */,
+				820972E021B6564300EEF992 /* Assets.xcassets */,
+			);
+			path = "Project Files";
 			sourceTree = "<group>";
 		};
 		E34E68D09A805C4C94A33E3A /* Pods */ = {
@@ -233,7 +271,9 @@
 			files = (
 				820972D921B6564200EEF992 /* ViewController.swift in Sources */,
 				820972D721B6564200EEF992 /* AppDelegate.swift in Sources */,
+				820972FD21B790CF00EEF992 /* Person.swift in Sources */,
 				820972DF21B6564200EEF992 /* Letschill_FinalProject_iOS.xcdatamodeld in Sources */,
+				820972FF21B790DF00EEF992 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

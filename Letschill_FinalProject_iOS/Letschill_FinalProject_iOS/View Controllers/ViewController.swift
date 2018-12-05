@@ -12,20 +12,22 @@ import FBSDKCoreKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myCustomFBLoginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let loginButton = FBSDKLoginButton()
+        myCustomFBLoginButton = FBSDKLoginButton()
         
         //ref = Database.database().reference()
         //storeRef = Storage.storage().reference()
         
         
         
-        view.addSubview(loginButton)
-        loginButton.center = self.view.center;
-        loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 28)
+        view.addSubview(myCustomFBLoginButton)
+        myCustomFBLoginButton.center = self.view.center;
+        myCustomFBLoginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 28)
     }
 
 
