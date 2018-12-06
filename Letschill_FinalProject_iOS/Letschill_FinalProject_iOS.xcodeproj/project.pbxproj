@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C1E6A8D21B84F5B00129DFD /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E6A8C21B84F5B00129DFD /* SignUpController.swift */; };
+		4C1E6A8F21B965C800129DFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C1E6A8E21B965C700129DFD /* GoogleService-Info.plist */; };
 		820972D721B6564200EEF992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820972D621B6564200EEF992 /* AppDelegate.swift */; };
 		820972D921B6564200EEF992 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820972D821B6564200EEF992 /* SignInController.swift */; };
 		820972DC21B6564200EEF992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820972DA21B6564200EEF992 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4C1E6A8C21B84F5B00129DFD /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		4C1E6A8E21B965C700129DFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AD46CB1B2CDC246F8C2AB01 /* Pods-Letschill_FinalProject_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Letschill_FinalProject_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Letschill_FinalProject_iOS/Pods-Letschill_FinalProject_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		820972D321B6564200EEF992 /* Letschill_FinalProject_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letschill_FinalProject_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		820972D621B6564200EEF992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				820972D621B6564200EEF992 /* AppDelegate.swift */,
 				820972E221B6564300EEF992 /* LaunchScreen.storyboard */,
+				4C1E6A8E21B965C700129DFD /* GoogleService-Info.plist */,
 				820972E021B6564300EEF992 /* Assets.xcassets */,
 			);
 			path = "Project Files";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				820972E421B6564300EEF992 /* LaunchScreen.storyboard in Resources */,
+				4C1E6A8F21B965C800129DFD /* GoogleService-Info.plist in Resources */,
 				820972E121B6564300EEF992 /* Assets.xcassets in Resources */,
 				820972DC21B6564200EEF992 /* Main.storyboard in Resources */,
 			);
@@ -437,7 +441,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.Letschill-FinalProject-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -461,7 +468,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.Letschill-FinalProject-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
