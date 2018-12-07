@@ -29,14 +29,18 @@ class ViewController: UIViewController {
             FirebaseApp.configure()
         }
         
+        // assign the custom button to default Facebook SDK Login Button
         myCustomFBLoginButton = FBSDKLoginButton()
         
-        //ref = Database.database().reference()
-        //storeRef = Storage.storage().reference()
-
+        // view the button
         view.addSubview(myCustomFBLoginButton)
         myCustomFBLoginButton.center = self.view.center;
-        myCustomFBLoginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 28)
+        
+        // position the facebook button based on the height and width of the frame
+        myCustomFBLoginButton.frame = CGRect(x: 32, y: view.frame.height - 95, width: view.frame.width - 60, height: 32)
+        
+        myCustomFBLoginButton = FBSDKLoginButton()
+        
         
         
         // Allow sign up label respond to user taps

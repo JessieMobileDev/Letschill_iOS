@@ -67,7 +67,7 @@
                                     <action selector="signIn:" destination="5d6-bZ-FoW" eventType="touchUpInside" id="bv9-27-R8N"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-8J-4is">
+                            <button hidden="YES" opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-8J-4is">
                                 <rect key="frame" x="28" y="563" width="319" height="39"/>
                                 <color key="backgroundColor" red="0.0039215686269999999" green="0.40991545376712329" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Sign in with Facebook">
@@ -693,10 +693,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ImageCreate" width="467" height="282"/>
+        <image name="ImageCreate" width="448.79998779296875" height="270.72000122070312"/>
         <image name="backTransLogin" width="471" height="801"/>
-        <image name="createDefault" width="502" height="303"/>
-        <image name="logo" width="1543" height="1534"/>
-        <image name="plusButton" width="303" height="307"/>
+        <image name="createDefault" width="481.92001342773438" height="290.8800048828125"/>
+        <image name="logo" width="740.8800048828125" height="736.55999755859375"/>
+        <image name="plusButton" width="290.8800048828125" height="294.72000122070312"/>
     </resources>
 </document>
