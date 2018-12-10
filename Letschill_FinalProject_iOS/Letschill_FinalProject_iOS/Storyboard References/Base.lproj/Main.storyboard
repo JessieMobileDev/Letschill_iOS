@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KGO-xB-Gsb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5d6-bZ-FoW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -59,7 +59,7 @@
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L0-qz-S4a">
                                 <rect key="frame" x="28" y="324" width="319" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -74,37 +74,37 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZF5-4t-xD8">
-                                <rect key="frame" x="28" y="372" width="51" height="32"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZF5-4t-xD8">
+                                <rect key="frame" x="28" y="372" width="51" height="31"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet? Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N3B-Fs-673">
-                                <rect key="frame" x="52" y="610" width="271" height="20"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <rect key="frame" x="50" y="610" width="275" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-AI-6NX">
-                                <rect key="frame" x="206" y="378" width="138" height="20"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="17"/>
+                                <rect key="frame" x="206" y="378" width="138" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wq-9G-b1l">
                                 <rect key="frame" x="28" y="220.5" width="319" height="39"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-Yu-sIO">
                                 <rect key="frame" x="28" y="267.5" width="319" height="38.5"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qfM-E9-YBA">
-                                <rect key="frame" x="83" y="378" width="115" height="20"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <rect key="frame" x="83" y="377.5" width="115" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
@@ -153,15 +153,92 @@
                     <connections>
                         <outlet property="mLabel_forgotPassword" destination="g1V-AI-6NX" id="Tue-Lq-1aQ"/>
                         <outlet property="mLabel_signUp" destination="N3B-Fs-673" id="vvA-3T-j0D"/>
+                        <outlet property="mSwitch_rememberMe" destination="ZF5-4t-xD8" id="aMT-va-Bgs"/>
                         <outlet property="mTextField_email_signin" destination="9Wq-9G-b1l" id="KWb-QK-M78"/>
                         <outlet property="mTextField_password_signin" destination="zSj-Yu-sIO" id="ySm-ec-ec5"/>
                         <outlet property="myCustomFBLoginButton" destination="Ieg-8J-4is" id="fGY-Sf-eWK"/>
                         <segue destination="kZc-mK-z3b" kind="show" identifier="signUpIdentifier" id="Ecm-kg-ojI"/>
+                        <segue destination="rCN-78-i7i" kind="show" identifier="forgotPasswordIdentifier" id="fpB-t0-2KM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSR-ps-Tpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Forgot Password Controller-->
+        <scene sceneID="T9z-BF-pMZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1O-wi-JoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="rCN-78-i7i" customClass="ForgotPasswordController" customModule="Letschill_FinalProject_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PF0-50-Uqb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="backTransLogin" translatesAutoresizingMaskIntoConstraints="NO" id="hYz-xP-I6m">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFI-ZB-FE2">
+                                <rect key="frame" x="28" y="264" width="319" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDU-Hy-Jyl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.60392156860000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.0039215686269999999" green="0.60392156860000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.0039215686269999999" green="0.60392156860000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Reset Password" id="9Mf-j9-PZD" colorLabel="IBBuiltInLabel-Gray">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0ly-TD-1UJ">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="dismissScreen:" destination="rCN-78-i7i" id="5UG-dT-DIf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXh-ud-DMh">
+                                <rect key="frame" x="28" y="312" width="319" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPassword:" destination="rCN-78-i7i" eventType="touchUpInside" id="F7D-Hb-C1j"/>
+                                    <action selector="signUp:" destination="kZc-mK-z3b" eventType="touchUpInside" id="dEh-mk-NXW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bFI-ZB-FE2" firstAttribute="width" secondItem="hYz-xP-I6m" secondAttribute="width" multiplier="0.85" id="11i-aN-mxa"/>
+                            <constraint firstItem="cXh-ud-DMh" firstAttribute="top" secondItem="bFI-ZB-FE2" secondAttribute="bottom" constant="18" id="1Kv-DG-wrz"/>
+                            <constraint firstItem="hYz-xP-I6m" firstAttribute="top" secondItem="LDU-Hy-Jyl" secondAttribute="bottom" id="6HO-U7-x0r"/>
+                            <constraint firstItem="cXh-ud-DMh" firstAttribute="width" secondItem="bFI-ZB-FE2" secondAttribute="width" id="A05-eq-ndF"/>
+                            <constraint firstItem="LDU-Hy-Jyl" firstAttribute="top" secondItem="bfy-f3-M59" secondAttribute="top" id="CZ0-XE-IuY"/>
+                            <constraint firstItem="cXh-ud-DMh" firstAttribute="centerX" secondItem="bFI-ZB-FE2" secondAttribute="centerX" id="KSi-Dv-pjD"/>
+                            <constraint firstItem="bfy-f3-M59" firstAttribute="trailing" secondItem="hYz-xP-I6m" secondAttribute="trailing" id="LQw-qY-HBj"/>
+                            <constraint firstItem="bFI-ZB-FE2" firstAttribute="centerX" secondItem="hYz-xP-I6m" secondAttribute="centerX" id="R0J-Hk-kzf"/>
+                            <constraint firstItem="hYz-xP-I6m" firstAttribute="leading" secondItem="bfy-f3-M59" secondAttribute="leading" id="aQP-MC-wBX"/>
+                            <constraint firstItem="bfy-f3-M59" firstAttribute="trailing" secondItem="LDU-Hy-Jyl" secondAttribute="trailing" id="ggi-kv-qgE"/>
+                            <constraint firstItem="bfy-f3-M59" firstAttribute="bottom" secondItem="hYz-xP-I6m" secondAttribute="bottom" id="jmJ-gy-EZ4"/>
+                            <constraint firstItem="bFI-ZB-FE2" firstAttribute="top" secondItem="LDU-Hy-Jyl" secondAttribute="bottom" constant="200" id="qPg-LI-OFf"/>
+                            <constraint firstItem="LDU-Hy-Jyl" firstAttribute="leading" secondItem="bfy-f3-M59" secondAttribute="leading" id="wqr-ck-RXi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bfy-f3-M59"/>
+                    </view>
+                    <connections>
+                        <outlet property="mTextField_email" destination="bFI-ZB-FE2" id="EG8-Cg-TjZ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="845.60000000000002" y="863.1184407796103"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="rp8-W8-etA">
@@ -177,25 +254,25 @@
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMH-tN-Lyx">
                                 <rect key="frame" x="28" y="299.5" width="319" height="39"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-Pq-LoY">
                                 <rect key="frame" x="28" y="206" width="319" height="38.5"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-pr-Oba">
                                 <rect key="frame" x="28" y="346.5" width="319" height="38.5"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-OE-7FX">
                                 <rect key="frame" x="28" y="403" width="319" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -206,7 +283,7 @@
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-dv-N6t">
                                 <rect key="frame" x="28" y="252.5" width="319" height="39"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-MW-HRk">
@@ -1503,12 +1580,12 @@ Thomas Gerard, Christopher Mouton (confirmed) ….</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Checkbox" width="203.77359008789062" height="203.77359008789062"/>
-        <image name="ImageCreate" width="448.79998779296875" height="270.72000122070312"/>
-        <image name="UnCheckbox" width="768" height="768"/>
+        <image name="Checkbox" width="150" height="150"/>
+        <image name="ImageCreate" width="467" height="282"/>
+        <image name="UnCheckbox" width="384" height="384"/>
         <image name="backTransLogin" width="471" height="801"/>
-        <image name="createDefault" width="481.92001342773438" height="290.8800048828125"/>
-        <image name="logo" width="740.8800048828125" height="736.55999755859375"/>
-        <image name="plusButton" width="290.8800048828125" height="294.72000122070312"/>
+        <image name="createDefault" width="502" height="303"/>
+        <image name="logo" width="1543" height="1534"/>
+        <image name="plusButton" width="303" height="307"/>
     </resources>
 </document>

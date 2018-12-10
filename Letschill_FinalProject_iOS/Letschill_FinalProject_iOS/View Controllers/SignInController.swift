@@ -19,10 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var mTextField_password_signin: UITextField!
     @IBOutlet weak var mLabel_signUp: UILabel!
     @IBOutlet weak var mLabel_forgotPassword: UILabel!
+    @IBOutlet weak var mSwitch_rememberMe: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // TODO: Uncomment the code below once the Main Screen is done
+//        if isSignedIn() {
+//            performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
+//        }
+        
         // FirebaseApp.configure() cannot be called twice. It's called in appDelegate init already.
         // Check if it's nil before.
         if FirebaseApp.app() == nil {
@@ -66,6 +72,13 @@ class ViewController: UIViewController {
                 // If successful, check if createdUser is not nil
                 if createdUser != nil {
                     
+                    if self.mSwitch_rememberMe.isOn {
+                        
+                        // Save the login instance state to user defaults
+                        UserDefaults.standard.set(true, forKey: "isSignedIn")
+                        UserDefaults.standard.synchronize()
+                    }
+                    
                     // Perform a segue to the "interests" screen
                     print("You're signed in!")
                     self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
@@ -91,8 +104,9 @@ class ViewController: UIViewController {
     
     @objc func forgotPasswordTapped(_ sender: UITapGestureRecognizer) {
         
-        // TODO: Forgot password functionality goes here
-        print("Forgot password functionality goes here")
+        // Move to the ForgotPasswordController
+        performSegue(withIdentifier: "forgotPasswordIdentifier", sender: self)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -113,6 +127,10 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: mTitle, message: mContent, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func isSignedIn() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isSignedIn")
     }
     
 }
