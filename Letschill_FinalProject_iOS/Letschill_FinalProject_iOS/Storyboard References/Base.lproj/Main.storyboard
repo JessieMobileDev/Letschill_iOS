@@ -56,13 +56,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backTransLogin" translatesAutoresizingMaskIntoConstraints="NO" id="B6A-9V-uzq">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L0-qz-S4a">
-                                <rect key="frame" x="28" y="324" width="319" height="39"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L0-qz-S4a" customClass="ButtonHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="354" width="319" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Sign In">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Sign in">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signIn:" destination="5d6-bZ-FoW" eventType="touchUpInside" id="bv9-27-R8N"/>
                                 </connections>
@@ -75,78 +80,95 @@
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZF5-4t-xD8">
-                                <rect key="frame" x="28" y="372" width="51" height="31"/>
+                                <rect key="frame" x="28" y="408" width="51" height="31"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet? Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N3B-Fs-673">
-                                <rect key="frame" x="50" y="610" width="275" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="74.5" y="617" width="226.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-AI-6NX">
-                                <rect key="frame" x="206" y="378" width="138" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="232" y="415" width="114" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wq-9G-b1l">
-                                <rect key="frame" x="28" y="220.5" width="319" height="39"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Email Address" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9Wq-9G-b1l" customClass="TextFieldHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="246.5" width="319" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.82745098039999998" green="0.23921568630000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email_ios"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-Yu-sIO">
-                                <rect key="frame" x="28" y="267.5" width="319" height="38.5"/>
+                            <textField opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-Yu-sIO" customClass="TextFieldHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="295.5" width="319" height="38.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password_ios"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qfM-E9-YBA">
-                                <rect key="frame" x="83" y="377.5" width="115" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="82" y="415" width="93" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.60392156860000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ZF5-4t-xD8" firstAttribute="top" secondItem="4L0-qz-S4a" secondAttribute="bottom" constant="9" id="0HA-dA-9jH"/>
-                            <constraint firstItem="4L0-qz-S4a" firstAttribute="centerY" secondItem="B6A-9V-uzq" secondAttribute="centerY" id="0P0-64-lrp"/>
+                            <constraint firstItem="ZF5-4t-xD8" firstAttribute="top" secondItem="4L0-qz-S4a" secondAttribute="bottom" constant="15" id="0HA-dA-9jH"/>
+                            <constraint firstItem="4L0-qz-S4a" firstAttribute="centerY" secondItem="B6A-9V-uzq" secondAttribute="centerY" constant="30" id="0P0-64-lrp"/>
                             <constraint firstItem="B6A-9V-uzq" firstAttribute="trailing" secondItem="VcM-9F-l0U" secondAttribute="trailing" id="19b-uo-yt5"/>
                             <constraint firstItem="B6A-9V-uzq" firstAttribute="top" secondItem="VcM-9F-l0U" secondAttribute="top" id="2tt-5b-HbK"/>
-                            <constraint firstItem="g1V-AI-6NX" firstAttribute="baseline" secondItem="qfM-E9-YBA" secondAttribute="firstBaseline" id="3Kf-X8-3cG"/>
                             <constraint firstItem="Ieg-8J-4is" firstAttribute="width" secondItem="4L0-qz-S4a" secondAttribute="width" id="9Xm-7v-s6I"/>
-                            <constraint firstItem="ZF5-4t-xD8" firstAttribute="centerY" secondItem="qfM-E9-YBA" secondAttribute="centerY" id="ASJ-Bf-6EM"/>
                             <constraint firstItem="4L0-qz-S4a" firstAttribute="width" secondItem="B6A-9V-uzq" secondAttribute="width" multiplier="0.85" id="Iny-RK-btq"/>
-                            <constraint firstItem="VcM-9F-l0U" firstAttribute="trailing" secondItem="g1V-AI-6NX" secondAttribute="trailing" constant="31" id="KHh-ID-Jmb"/>
-                            <constraint firstItem="g1V-AI-6NX" firstAttribute="top" secondItem="4L0-qz-S4a" secondAttribute="bottom" constant="15" id="NSB-jO-Ofb"/>
-                            <constraint firstItem="qfM-E9-YBA" firstAttribute="leading" secondItem="ZF5-4t-xD8" secondAttribute="trailing" constant="6" id="NeO-HA-m3j"/>
                             <constraint firstItem="4L0-qz-S4a" firstAttribute="centerX" secondItem="B6A-9V-uzq" secondAttribute="centerX" id="Nt8-fR-3fd"/>
                             <constraint firstItem="Ieg-8J-4is" firstAttribute="height" secondItem="4L0-qz-S4a" secondAttribute="height" id="PK0-vm-a2Q"/>
                             <constraint firstItem="VcM-9F-l0U" firstAttribute="bottom" secondItem="B6A-9V-uzq" secondAttribute="bottom" id="Pe7-oX-XjX"/>
                             <constraint firstItem="B6A-9V-uzq" firstAttribute="bottom" secondItem="VcM-9F-l0U" secondAttribute="bottom" id="QNr-tk-utj"/>
-                            <constraint firstItem="N3B-Fs-673" firstAttribute="top" secondItem="Ieg-8J-4is" secondAttribute="bottom" constant="8" id="SWh-Dm-7ha"/>
-                            <constraint firstItem="4L0-qz-S4a" firstAttribute="top" secondItem="zSj-Yu-sIO" secondAttribute="bottom" constant="18" id="Vvb-Jg-EFf"/>
+                            <constraint firstItem="N3B-Fs-673" firstAttribute="top" secondItem="Ieg-8J-4is" secondAttribute="bottom" constant="15" id="SWh-Dm-7ha"/>
+                            <constraint firstItem="4L0-qz-S4a" firstAttribute="top" secondItem="zSj-Yu-sIO" secondAttribute="bottom" constant="20" id="Vvb-Jg-EFf"/>
                             <constraint firstItem="zSj-Yu-sIO" firstAttribute="centerX" secondItem="4L0-qz-S4a" secondAttribute="centerX" id="Xv2-Pi-Zy6"/>
                             <constraint firstItem="zSj-Yu-sIO" firstAttribute="width" secondItem="4L0-qz-S4a" secondAttribute="width" id="Y3l-90-RNb"/>
-                            <constraint firstItem="9Wq-9G-b1l" firstAttribute="centerX" secondItem="4L0-qz-S4a" secondAttribute="centerX" id="bNL-Uy-RWa"/>
+                            <constraint firstItem="9Wq-9G-b1l" firstAttribute="width" secondItem="zSj-Yu-sIO" secondAttribute="width" id="bM1-ey-NCc"/>
                             <constraint firstItem="B6A-9V-uzq" firstAttribute="leading" secondItem="VcM-9F-l0U" secondAttribute="leading" id="bpn-pd-bWN"/>
                             <constraint firstItem="VcM-9F-l0U" firstAttribute="trailing" secondItem="B6A-9V-uzq" secondAttribute="trailing" id="cQc-BE-DZs"/>
+                            <constraint firstItem="qfM-E9-YBA" firstAttribute="centerY" secondItem="ZF5-4t-xD8" secondAttribute="centerY" id="dGP-p9-H65"/>
+                            <constraint firstItem="g1V-AI-6NX" firstAttribute="leading" secondItem="4L0-qz-S4a" secondAttribute="trailing" constant="-115" id="dlL-4g-gKV"/>
                             <constraint firstItem="4L0-qz-S4a" firstAttribute="height" secondItem="B6A-9V-uzq" secondAttribute="height" multiplier="0.06" id="dwT-Up-ie5"/>
-                            <constraint firstItem="zSj-Yu-sIO" firstAttribute="top" secondItem="9Wq-9G-b1l" secondAttribute="bottom" constant="8" id="eyS-ai-xjY"/>
                             <constraint firstItem="Ieg-8J-4is" firstAttribute="leading" secondItem="ZF5-4t-xD8" secondAttribute="leading" id="fIi-zI-2tK"/>
-                            <constraint firstItem="g1V-AI-6NX" firstAttribute="leading" secondItem="qfM-E9-YBA" secondAttribute="trailing" constant="8" id="fZd-0f-3t8"/>
                             <constraint firstItem="Ieg-8J-4is" firstAttribute="centerX" secondItem="N3B-Fs-673" secondAttribute="centerX" id="g6s-gg-asF"/>
                             <constraint firstItem="B6A-9V-uzq" firstAttribute="leading" secondItem="VcM-9F-l0U" secondAttribute="leading" id="g8Q-37-SrC"/>
+                            <constraint firstItem="g1V-AI-6NX" firstAttribute="centerY" secondItem="qfM-E9-YBA" secondAttribute="centerY" id="hl1-ge-Z5p"/>
                             <constraint firstItem="Ieg-8J-4is" firstAttribute="centerX" secondItem="4L0-qz-S4a" secondAttribute="centerX" id="j61-pU-cmu"/>
-                            <constraint firstItem="9Wq-9G-b1l" firstAttribute="height" secondItem="4L0-qz-S4a" secondAttribute="height" id="kv7-n2-8xc"/>
+                            <constraint firstItem="9Wq-9G-b1l" firstAttribute="centerX" secondItem="zSj-Yu-sIO" secondAttribute="centerX" id="kZh-9Y-4Ut"/>
                             <constraint firstAttribute="bottom" secondItem="Ieg-8J-4is" secondAttribute="bottom" constant="65" id="lEX-XC-hut"/>
+                            <constraint firstItem="qfM-E9-YBA" firstAttribute="leading" secondItem="ZF5-4t-xD8" secondAttribute="trailing" constant="5" id="lx1-fY-D8V"/>
                             <constraint firstItem="zSj-Yu-sIO" firstAttribute="height" secondItem="4L0-qz-S4a" secondAttribute="height" id="oFt-PA-Z8E"/>
-                            <constraint firstItem="zSj-Yu-sIO" firstAttribute="top" secondItem="9Wq-9G-b1l" secondAttribute="bottom" constant="8" symbolic="YES" id="r9d-5T-c1B"/>
-                            <constraint firstItem="ZF5-4t-xD8" firstAttribute="centerY" secondItem="g1V-AI-6NX" secondAttribute="centerY" id="rJp-74-Gde"/>
-                            <constraint firstItem="9Wq-9G-b1l" firstAttribute="width" secondItem="4L0-qz-S4a" secondAttribute="width" id="w27-d0-8pp"/>
+                            <constraint firstItem="zSj-Yu-sIO" firstAttribute="top" secondItem="9Wq-9G-b1l" secondAttribute="bottom" constant="10" id="pq6-ls-X6R"/>
                             <constraint firstItem="B6A-9V-uzq" firstAttribute="top" secondItem="VcM-9F-l0U" secondAttribute="top" id="wf1-U4-sSv"/>
+                            <constraint firstItem="9Wq-9G-b1l" firstAttribute="height" secondItem="zSj-Yu-sIO" secondAttribute="height" id="xZr-UZ-ve6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VcM-9F-l0U"/>
                     </view>
@@ -168,7 +190,6 @@
         <!--Forgot Password Controller-->
         <scene sceneID="T9z-BF-pMZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1O-wi-JoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rCN-78-i7i" customClass="ForgotPasswordController" customModule="Letschill_FinalProject_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PF0-50-Uqb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -237,6 +258,7 @@
                         <outlet property="mTextField_email" destination="bFI-ZB-FE2" id="EG8-Cg-TjZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1O-wi-JoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="863.1184407796103"/>
         </scene>
@@ -251,40 +273,85 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backTransLogin" translatesAutoresizingMaskIntoConstraints="NO" id="mYY-do-jIp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMH-tN-Lyx">
-                                <rect key="frame" x="28" y="299.5" width="319" height="39"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YMH-tN-Lyx" customClass="TextFieldHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="345.5" width="319" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password_ios"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-Pq-LoY">
-                                <rect key="frame" x="28" y="206" width="319" height="38.5"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-Pq-LoY" customClass="TextFieldHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="248" width="319" height="38.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user_ios"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-pr-Oba">
-                                <rect key="frame" x="28" y="346.5" width="319" height="38.5"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Repeat Password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-pr-Oba" customClass="TextFieldHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="394.5" width="319" height="38.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password_ios"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-OE-7FX">
-                                <rect key="frame" x="28" y="403" width="319" height="39"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-OE-7FX" customClass="ButtonHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="453" width="319" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Sign Up">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Sign up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signUp:" destination="kZc-mK-z3b" eventType="touchUpInside" id="9MP-dx-ZL4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-dv-N6t">
-                                <rect key="frame" x="28" y="252.5" width="319" height="39"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Email Address" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-dv-N6t" customClass="TextFieldHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="296.5" width="319" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email_ios"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-MW-HRk">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -309,31 +376,30 @@
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.60392156860000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="1hC-BJ-OHj" firstAttribute="trailing" secondItem="mYY-do-jIp" secondAttribute="trailing" id="0We-Ff-3GL"/>
-                            <constraint firstItem="WNN-dv-N6t" firstAttribute="height" secondItem="QqA-OE-7FX" secondAttribute="height" id="4Ah-yC-wvo"/>
                             <constraint firstItem="QqA-OE-7FX" firstAttribute="width" secondItem="mYY-do-jIp" secondAttribute="width" multiplier="0.85" id="5uy-HN-N3z"/>
                             <constraint firstItem="UPz-pr-Oba" firstAttribute="height" secondItem="QqA-OE-7FX" secondAttribute="height" id="6Nx-Vb-5HA"/>
-                            <constraint firstItem="UPz-pr-Oba" firstAttribute="top" secondItem="YMH-tN-Lyx" secondAttribute="bottom" constant="8" id="9hQ-vx-LRn"/>
                             <constraint firstItem="mYY-do-jIp" firstAttribute="top" secondItem="1hC-BJ-OHj" secondAttribute="top" id="CWN-cO-tU2"/>
+                            <constraint firstItem="HOm-Pq-LoY" firstAttribute="width" secondItem="WNN-dv-N6t" secondAttribute="width" id="FQx-CN-6Gw"/>
+                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="width" secondItem="UPz-pr-Oba" secondAttribute="width" id="FcZ-zs-Uvg"/>
+                            <constraint firstItem="WNN-dv-N6t" firstAttribute="height" secondItem="YMH-tN-Lyx" secondAttribute="height" id="Fhk-RQ-kBr"/>
                             <constraint firstItem="mYY-do-jIp" firstAttribute="leading" secondItem="1hC-BJ-OHj" secondAttribute="leading" id="I1w-6g-U2I"/>
-                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="top" secondItem="WNN-dv-N6t" secondAttribute="bottom" constant="8" symbolic="YES" id="J62-NZ-sdS"/>
-                            <constraint firstItem="WNN-dv-N6t" firstAttribute="top" secondItem="HOm-Pq-LoY" secondAttribute="bottom" constant="8" id="KNS-e4-5MU"/>
-                            <constraint firstItem="1hC-BJ-OHj" firstAttribute="bottom" secondItem="QqA-OE-7FX" secondAttribute="bottom" constant="225" id="MQv-Hk-zgT"/>
-                            <constraint firstItem="HOm-Pq-LoY" firstAttribute="width" secondItem="QqA-OE-7FX" secondAttribute="width" id="NMf-ek-8uU"/>
-                            <constraint firstItem="QqA-OE-7FX" firstAttribute="top" secondItem="UPz-pr-Oba" secondAttribute="bottom" constant="18" id="RSS-lo-RiL"/>
-                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="centerX" secondItem="QqA-OE-7FX" secondAttribute="centerX" id="S4W-Ul-2hF"/>
-                            <constraint firstItem="WNN-dv-N6t" firstAttribute="width" secondItem="QqA-OE-7FX" secondAttribute="width" id="VU4-oJ-fbf"/>
-                            <constraint firstItem="HOm-Pq-LoY" firstAttribute="centerX" secondItem="QqA-OE-7FX" secondAttribute="centerX" id="ZcQ-qT-d7q"/>
+                            <constraint firstItem="1hC-BJ-OHj" firstAttribute="bottom" secondItem="QqA-OE-7FX" secondAttribute="bottom" constant="175" id="MQv-Hk-zgT"/>
+                            <constraint firstItem="WNN-dv-N6t" firstAttribute="centerX" secondItem="YMH-tN-Lyx" secondAttribute="centerX" id="Ma0-5y-kq4"/>
+                            <constraint firstItem="WNN-dv-N6t" firstAttribute="width" secondItem="YMH-tN-Lyx" secondAttribute="width" id="N5w-SW-707"/>
+                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="height" secondItem="UPz-pr-Oba" secondAttribute="height" id="Nfw-TT-dKA"/>
+                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="centerX" secondItem="UPz-pr-Oba" secondAttribute="centerX" id="PZ9-TQ-hhV"/>
+                            <constraint firstItem="WNN-dv-N6t" firstAttribute="top" secondItem="HOm-Pq-LoY" secondAttribute="bottom" constant="10" id="PgW-I4-53N"/>
+                            <constraint firstItem="QqA-OE-7FX" firstAttribute="top" secondItem="UPz-pr-Oba" secondAttribute="bottom" constant="20" id="RSS-lo-RiL"/>
+                            <constraint firstItem="HOm-Pq-LoY" firstAttribute="height" secondItem="WNN-dv-N6t" secondAttribute="height" id="Ull-U8-vN9"/>
+                            <constraint firstItem="UPz-pr-Oba" firstAttribute="top" secondItem="YMH-tN-Lyx" secondAttribute="bottom" constant="10" id="VZM-pG-KMs"/>
                             <constraint firstItem="UPz-pr-Oba" firstAttribute="centerX" secondItem="QqA-OE-7FX" secondAttribute="centerX" id="aGH-yd-KC0"/>
                             <constraint firstItem="5KB-MW-HRk" firstAttribute="leading" secondItem="1hC-BJ-OHj" secondAttribute="leading" id="blf-Js-QU4"/>
+                            <constraint firstItem="HOm-Pq-LoY" firstAttribute="centerX" secondItem="WNN-dv-N6t" secondAttribute="centerX" id="eFs-i6-TuE"/>
                             <constraint firstItem="5KB-MW-HRk" firstAttribute="top" secondItem="1hC-BJ-OHj" secondAttribute="top" id="fVQ-yb-Kp6"/>
                             <constraint firstItem="QqA-OE-7FX" firstAttribute="height" secondItem="mYY-do-jIp" secondAttribute="height" multiplier="0.06" id="g4d-ol-iUd"/>
-                            <constraint firstItem="WNN-dv-N6t" firstAttribute="centerX" secondItem="QqA-OE-7FX" secondAttribute="centerX" id="gdb-Rw-ReI"/>
-                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="top" secondItem="WNN-dv-N6t" secondAttribute="bottom" constant="8" id="hIB-CT-HZ0"/>
+                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="top" secondItem="WNN-dv-N6t" secondAttribute="bottom" constant="10" id="hWv-CU-4l9"/>
                             <constraint firstItem="UPz-pr-Oba" firstAttribute="width" secondItem="QqA-OE-7FX" secondAttribute="width" id="lxT-eq-r0Y"/>
                             <constraint firstItem="1hC-BJ-OHj" firstAttribute="bottom" secondItem="mYY-do-jIp" secondAttribute="bottom" id="quq-sn-Tzk"/>
-                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="height" secondItem="QqA-OE-7FX" secondAttribute="height" id="t7W-Nb-eCx"/>
-                            <constraint firstItem="HOm-Pq-LoY" firstAttribute="height" secondItem="QqA-OE-7FX" secondAttribute="height" id="tE1-Oj-ee5"/>
-                            <constraint firstItem="YMH-tN-Lyx" firstAttribute="width" secondItem="QqA-OE-7FX" secondAttribute="width" id="v8T-E3-j7K"/>
                             <constraint firstItem="QqA-OE-7FX" firstAttribute="centerX" secondItem="mYY-do-jIp" secondAttribute="centerX" id="wDy-6w-qsg"/>
                             <constraint firstItem="5KB-MW-HRk" firstAttribute="trailing" secondItem="1hC-BJ-OHj" secondAttribute="trailing" id="y6g-XZ-hhG"/>
                         </constraints>
@@ -1585,7 +1651,10 @@ Thomas Gerard, Christopher Mouton (confirmed) ….</string>
         <image name="UnCheckbox" width="384" height="384"/>
         <image name="backTransLogin" width="471" height="801"/>
         <image name="createDefault" width="502" height="303"/>
+        <image name="email_ios" width="50" height="50"/>
         <image name="logo" width="1543" height="1534"/>
+        <image name="password_ios" width="50" height="50"/>
         <image name="plusButton" width="303" height="307"/>
+        <image name="user_ios" width="50" height="50"/>
     </resources>
 </document>

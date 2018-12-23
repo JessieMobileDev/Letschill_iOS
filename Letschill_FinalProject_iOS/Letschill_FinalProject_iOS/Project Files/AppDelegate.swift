@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-
+        // Delay the launchscreen for 2 second
+        Thread.sleep(forTimeInterval: 2.0)
         
         return true
     }

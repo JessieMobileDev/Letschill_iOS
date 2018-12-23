@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var mLabel_forgotPassword: UILabel!
     @IBOutlet weak var mSwitch_rememberMe: UISwitch!
     
+    // Variables
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,7 +49,12 @@ class ViewController: UIViewController {
         myCustomFBLoginButton.frame = CGRect(x: 32, y: view.frame.height - 95, width: view.frame.width - 60, height: 32)
         
         myCustomFBLoginButton = FBSDKLoginButton()
-        
+    
+        // Resize the Switch button
+        if mSwitch_rememberMe != nil {
+            
+          mSwitch_rememberMe.transform = CGAffineTransform(scaleX: 0.65, y: 0.65)
+        }
         
         
         // Allow sign up label respond to user taps
@@ -132,6 +140,5 @@ class ViewController: UIViewController {
     func isSignedIn() -> Bool {
         return UserDefaults.standard.bool(forKey: "isSignedIn")
     }
-    
 }
 

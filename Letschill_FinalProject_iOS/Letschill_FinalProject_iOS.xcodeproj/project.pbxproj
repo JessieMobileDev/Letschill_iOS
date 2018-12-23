@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1A865A21D019050093CB2D /* TextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A865921D019050093CB2D /* TextFieldHandler.swift */; };
+		4C1A865C21D04B450093CB2D /* ButtonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A865B21D04B450093CB2D /* ButtonHandler.swift */; };
 		4C1E6A8D21B84F5B00129DFD /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E6A8C21B84F5B00129DFD /* SignUpController.swift */; };
 		4C1E6A8F21B965C800129DFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C1E6A8E21B965C700129DFD /* GoogleService-Info.plist */; };
 		4C7AAF8C21BEAE0300409FE1 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7AAF8B21BEAE0300409FE1 /* ForgotPasswordController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1A865921D019050093CB2D /* TextFieldHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHandler.swift; sourceTree = "<group>"; };
+		4C1A865B21D04B450093CB2D /* ButtonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHandler.swift; sourceTree = "<group>"; };
 		4C1E6A8C21B84F5B00129DFD /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		4C1E6A8E21B965C700129DFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C7AAF8B21BEAE0300409FE1 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1A865821D018E10093CB2D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4C1A865921D019050093CB2D /* TextFieldHandler.swift */,
+				4C1A865B21D04B450093CB2D /* ButtonHandler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		820972CA21B6564200EEF992 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 		820972D521B6564200EEF992 /* Letschill_FinalProject_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A865821D018E10093CB2D /* Utilities */,
 				820972FA21B7904F00EEF992 /* Data Model */,
 				820972F921B78F3700EEF992 /* Storyboard References */,
 				820972F821B78E3000EEF992 /* View Controllers */,
@@ -290,6 +304,8 @@
 				820972FF21B790DF00EEF992 /* Event.swift in Sources */,
 				4C1E6A8D21B84F5B00129DFD /* SignUpController.swift in Sources */,
 				82F54E8921BAD49C00C20803 /* FilterSearchController.swift in Sources */,
+				4C1A865C21D04B450093CB2D /* ButtonHandler.swift in Sources */,
+				4C1A865A21D019050093CB2D /* TextFieldHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
