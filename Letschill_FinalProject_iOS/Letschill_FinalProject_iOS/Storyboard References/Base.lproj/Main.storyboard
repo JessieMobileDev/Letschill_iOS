@@ -453,7 +453,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event name" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9RP-BN-UbX" customClass="MFTextField">
-                                                <rect key="frame" x="20" y="230" width="335" height="33.5"/>
+                                                <rect key="frame" x="20" y="230" width="335" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -473,7 +473,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FRJ-wc-o1Y" customClass="MFTextField">
-                                                <rect key="frame" x="20" y="273.5" width="279" height="33.5"/>
+                                                <rect key="frame" x="20" y="258" width="279" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -490,25 +490,25 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_ios" translatesAutoresizingMaskIntoConstraints="NO" id="Rs1-sn-CNO">
-                                                <rect key="frame" x="319" y="278.5" width="33.5" height="33.5"/>
+                                                <rect key="frame" x="319" y="263" width="33.5" height="33.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Rs1-sn-CNO" secondAttribute="height" multiplier="1:1" id="TyZ-cS-Gjm"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="rTC-ZH-yzm">
-                                                <rect key="frame" x="20" y="360.5" width="50.5" height="33.5"/>
+                                                <rect key="frame" x="20" y="314" width="50.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-5J-WbK">
-                                                <rect key="frame" x="191" y="360.5" width="43.5" height="33.5"/>
+                                                <rect key="frame" x="191" y="314" width="43.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-S0-Ffo" customClass="MFTextField">
-                                                <rect key="frame" x="20" y="317" width="335" height="33.5"/>
+                                                <rect key="frame" x="20" y="286" width="335" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -525,7 +525,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-yd-vQC" customClass="MFTextField">
-                                                <rect key="frame" x="20" y="404" width="335" height="33.5"/>
+                                                <rect key="frame" x="20" y="342" width="335" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -542,7 +542,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start time" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-rR-jxS" customClass="MFTextField">
-                                                <rect key="frame" x="75.5" y="360.5" width="110.5" height="33.5"/>
+                                                <rect key="frame" x="75.5" y="314" width="110.5" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -559,7 +559,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End time" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="83i-xk-dIt" customClass="MFTextField">
-                                                <rect key="frame" x="239.5" y="360.5" width="110.5" height="33.5"/>
+                                                <rect key="frame" x="239.5" y="314" width="110.5" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -576,7 +576,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Participants" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="SjD-KJ-WfU" customClass="MFTextField">
-                                                <rect key="frame" x="20" y="447.5" width="335" height="33.5"/>
+                                                <rect key="frame" x="20" y="370" width="335" height="18"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
@@ -593,43 +593,43 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWh-2t-BcC">
-                                                <rect key="frame" x="20" y="524.5" width="325" height="100"/>
+                                                <rect key="frame" x="20" y="416" width="325" height="100"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="k9o-rH-NSN" id="gGW-4V-98y"/>
                                                 </connections>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-fg-ha7">
-                                                <rect key="frame" x="20" y="491" width="67" height="33.5"/>
+                                                <rect key="frame" x="20" y="398" width="67" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this a recurring event?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="NQJ-zT-U36">
-                                                <rect key="frame" x="20" y="624.5" width="276" height="33.5"/>
+                                                <rect key="frame" x="20" y="516" width="276" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this a public event?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Wv4-4a-LVq">
-                                                <rect key="frame" x="20" y="668" width="276" height="33.5"/>
+                                                <rect key="frame" x="20" y="544" width="276" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMY-T7-0O7">
-                                                <rect key="frame" x="301" y="629.5" width="51" height="31"/>
+                                                <rect key="frame" x="301" y="521" width="51" height="31"/>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVP-1H-O09">
-                                                <rect key="frame" x="301" y="670.5" width="51" height="31"/>
+                                                <rect key="frame" x="301" y="562" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send invitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Xck-Os-W57">
-                                                <rect key="frame" x="20" y="721.5" width="101.5" height="33.5"/>
+                                                <rect key="frame" x="20" y="582" width="101.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r0-y9-pQV">
-                                                <rect key="frame" x="20" y="765" width="335" height="100"/>
+                                                <rect key="frame" x="20" y="610" width="335" height="100"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7z-mz-OeI">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
@@ -649,7 +649,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-bk-7ao" customClass="ButtonHandler" customModule="Letschill_FinalProject_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="885" width="335" height="33"/>
+                                                <rect key="frame" x="20" y="730" width="335" height="33"/>
                                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Save">
@@ -666,7 +666,7 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_ios" translatesAutoresizingMaskIntoConstraints="NO" id="Adx-BQ-qUU">
-                                                <rect key="frame" x="324" y="729" width="26" height="26"/>
+                                                <rect key="frame" x="324" y="574" width="26" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Adx-BQ-qUU" secondAttribute="height" multiplier="1:1" id="FOR-w7-60E"/>
                                                 </constraints>
@@ -778,7 +778,7 @@
                         <outlet property="mSwitch_public" destination="GVP-1H-O09" id="fPx-uf-gt6"/>
                         <outlet property="mSwitch_recurring" destination="MMY-T7-0O7" id="vEr-Ex-TKh"/>
                         <outlet property="mTableView_invitations" destination="i7z-mz-OeI" id="RCz-o1-jzG"/>
-                        <outlet property="mTextField_descritpion" destination="7jT-yd-vQC" id="Lzn-g8-k70"/>
+                        <outlet property="mTextField_description" destination="7jT-yd-vQC" id="teY-OR-eZf"/>
                         <outlet property="mTextField_endTime" destination="83i-xk-dIt" id="jJZ-BU-pQA"/>
                         <outlet property="mTextField_eventDate" destination="LkD-S0-Ffo" id="R7S-9t-pQF"/>
                         <outlet property="mTextField_eventName" destination="9RP-BN-UbX" id="vK6-mO-7tm"/>
@@ -2021,17 +2021,17 @@ Thomas Gerard, Christopher Mouton (confirmed) ….</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Checkbox" width="150" height="150"/>
-        <image name="ImageCreate" width="467" height="282"/>
-        <image name="UnCheckbox" width="384" height="384"/>
-        <image name="add_ios" width="512" height="512"/>
+        <image name="Checkbox" width="203.77359008789062" height="203.77359008789062"/>
+        <image name="ImageCreate" width="448.79998779296875" height="270.72000122070312"/>
+        <image name="UnCheckbox" width="768" height="768"/>
+        <image name="add_ios" width="384" height="384"/>
         <image name="backTransLogin" width="471" height="801"/>
-        <image name="createDefault" width="502" height="303"/>
-        <image name="email_ios" width="50" height="50"/>
-        <image name="location_ios" width="512" height="512"/>
-        <image name="logo" width="1543" height="1534"/>
-        <image name="password_ios" width="50" height="50"/>
-        <image name="plusButton" width="303" height="307"/>
-        <image name="user_ios" width="50" height="50"/>
+        <image name="createDefault" width="481.92001342773438" height="290.8800048828125"/>
+        <image name="email_ios" width="24" height="24"/>
+        <image name="location_ios" width="384" height="384"/>
+        <image name="logo" width="740.8800048828125" height="736.55999755859375"/>
+        <image name="password_ios" width="24" height="24"/>
+        <image name="plusButton" width="290.8800048828125" height="294.72000122070312"/>
+        <image name="user_ios" width="24" height="24"/>
     </resources>
 </document>
