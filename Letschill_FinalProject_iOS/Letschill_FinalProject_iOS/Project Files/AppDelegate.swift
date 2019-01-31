@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Delay the launchscreen for 2 second
         Thread.sleep(forTimeInterval: 2.0)
         
+        FirebaseApp.configure()
+        
         return true
     }
     

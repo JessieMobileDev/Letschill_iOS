@@ -40,12 +40,34 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     // for user id
     var UserId: DatabaseReference?
 
+//    let date = Date()
+//    let monthString = Date().month
+//    //let dateString = Date().
+    
+    //Here I’m creating the calendar instance that we will operate with:
+    let calendar = NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)
+    
+    
+    //Now asking the calendar what month are we in today’s date:
+    let currentMonthInt = (NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)?.component(NSCalendar.Unit.month, from: Date()))
+    
+    
+    //Now asking the calendar what year are we in today’s date:
+    let currentYearInt = (NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)?.component(NSCalendar.Unit.year, from: Date()))!
+    
+    let currentDayInt = (NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)?.component(NSCalendar.Unit.day, from: Date()))!
+
+    let dateP = NSDate()
+//     let dateString = Date().month
+//
+    var dateFormatter = DateFormatter().dateFormat = "MM-dd-yyyy"
+
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+       
 
     }
     
@@ -83,7 +105,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBAction func saveNewEvent(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "createToExplore", sender: nil)
+        //performSegue(withIdentifier: "createToExplore", sender: nil)
         storeToDatabase()
         
     }
@@ -92,32 +114,41 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         // set the firebase reference
         ref = Database.database().reference()
         
+        
         // create an unique ID to store each event in the database
-        uniqueID = ref?.child("Event").childByAutoId()
+        uniqueID = nil
         
+        print("DATEEEEEEEEEEEEEEE")
+        print(dateP)
         
-        uniqueID?.child("Title").setValue(mTextField_eventName.text)
-        uniqueID?.child("Description").setValue(mTextField_description.text)
-        uniqueID?.child("Location").setValue(mTextField_location.text)
-        uniqueID?.child("Date").setValue(mTextField_eventDate.text)
-        uniqueID?.child("Start Time").setValue(mTextField_startTime.text)
-        uniqueID?.child("End Time").setValue(mTextField_endTime.text)
-        uniqueID?.child("Participants").setValue(mTextField_participants.text)
-        uniqueID?.child("Category").setValue(mPicker_category.description)
-        uniqueID?.child("isRecurring").setValue(mSwitch_recurring.isOn)
-        uniqueID?.child("isPublicOrPrivate").setValue(mSwitch_public.isOn)
-        
-        
-        
-        uniqueID?.child("uniqueID").setValue(uniqueID?.key)
-        
-        
-        // get user uid
-        guard let uid = Auth.auth().currentUser?.uid else {
-            return
+        if let date = currentMonthInt?.description {
+            uniqueID = ref?.child("Event").child(date).child("month").childByAutoId()
+            
+            uniqueID?.child("Title").setValue(mTextField_eventName.text)
+            uniqueID?.child("Description").setValue(mTextField_description.text)
+            uniqueID?.child("Location").setValue(mTextField_location.text)
+            uniqueID?.child("Date").setValue(mTextField_eventDate.text)
+            uniqueID?.child("Start Time").setValue(mTextField_startTime.text)
+            uniqueID?.child("End Time").setValue(mTextField_endTime.text)
+            uniqueID?.child("Participants").setValue(mTextField_participants.text)
+            uniqueID?.child("Category").setValue(mPicker_category.description)
+            uniqueID?.child("isRecurring").setValue(mSwitch_recurring.isOn)
+            uniqueID?.child("isPublicOrPrivate").setValue(mSwitch_public.isOn)
+            
+            
+            
+            uniqueID?.child("uniqueID").setValue(uniqueID?.key)
+            
+            
+            // get user uid
+            guard let uid = Auth.auth().currentUser?.uid else {
+                return
+            }
+            
+            uniqueID?.child("userId").setValue(uid)
         }
         
-        uniqueID?.child("userId").setValue(uid)
+        
         
         createdEvent.append(Event(ieventId: uniqueID?.key, ieventName: mTextField_eventName.text, ieventStartTime: mTextField_startTime.text, ieventEndTime: mTextField_endTime.text, ieventLocation: mTextField_location.text, ieventDescription: mTextField_description.text, ieventDate: mTextField_eventDate.description, ieventParticipants: mTextField_participants.text, ieventCategory: mPicker_category.description, ieventIsReccuring: mSwitch_recurring.isOn, ieventPublicOrPrivate: mSwitch_public.isOn))
 //
@@ -150,4 +181,12 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     
     
+}
+
+public extension Date {
+    var date: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-DD-YYYY"
+        return dateFormatter.string(from: self)
+    }
 }

@@ -70,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signIn:" destination="5d6-bZ-FoW" eventType="touchUpInside" id="bv9-27-R8N"/>
-                                    <segue destination="I4b-11-MFr" kind="presentation" id="AF7-gT-QAr"/>
+                                    <segue destination="I4b-11-MFr" kind="custom" identifier="emailSignInSucessToMain" id="GwX-wT-ZNH"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-8J-4is">
@@ -79,6 +79,9 @@
                                 <state key="normal" title="Sign in with Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="I4b-11-MFr" kind="presentation" identifier="moveToMainScreenIdentifier" id="iTn-wf-dh1"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZF5-4t-xD8">
                                 <rect key="frame" x="28" y="408" width="51" height="31"/>
@@ -179,7 +182,6 @@
                         <outlet property="mSwitch_rememberMe" destination="ZF5-4t-xD8" id="aMT-va-Bgs"/>
                         <outlet property="mTextField_email_signin" destination="9Wq-9G-b1l" id="KWb-QK-M78"/>
                         <outlet property="mTextField_password_signin" destination="zSj-Yu-sIO" id="ySm-ec-ec5"/>
-                        <outlet property="myCustomFBLoginButton" destination="Ieg-8J-4is" id="fGY-Sf-eWK"/>
                         <segue destination="kZc-mK-z3b" kind="show" identifier="signUpIdentifier" id="Ecm-kg-ojI"/>
                         <segue destination="rCN-78-i7i" kind="show" identifier="forgotPasswordIdentifier" id="fpB-t0-2KM"/>
                     </connections>
@@ -1798,4 +1800,7 @@ Thomas Gerard, Christopher Mouton (confirmed) ….</string>
         <image name="profile" width="36" height="36"/>
         <image name="user_ios" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GwX-wT-ZNH"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -11,10 +11,11 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+
 
     // Outlets
-    @IBOutlet weak var myCustomFBLoginButton: UIButton!
+    @IBOutlet weak var myCustomFBLoginButtonOne: UIButton!
     @IBOutlet weak var mTextField_email_signin: UITextField!
     @IBOutlet weak var mTextField_password_signin: UITextField!
     @IBOutlet weak var mLabel_signUp: UILabel!
@@ -22,15 +23,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var mSwitch_rememberMe: UISwitch!
     
     // Variables
+    //myCustomFBLoginButton: FBSDKLoginButton()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // TODO: Uncomment the code below once the Main Screen is done
-//        if isSignedIn() {
-//            performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
-//        }
+        if isSignedIn() {
+            performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
+        }
         
         // FirebaseApp.configure() cannot be called twice. It's called in appDelegate init already.
         // Check if it's nil before.
@@ -39,16 +41,19 @@ class ViewController: UIViewController {
         }
         
         // assign the custom button to default Facebook SDK Login Button
-        myCustomFBLoginButton = FBSDKLoginButton()
+        let myCustomFBLoginButton = FBSDKLoginButton()
         
-        // view the button
+        // display the button
         view.addSubview(myCustomFBLoginButton)
         myCustomFBLoginButton.center = self.view.center;
         
         // position the facebook button based on the height and width of the frame
         myCustomFBLoginButton.frame = CGRect(x: 32, y: view.frame.height - 95, width: view.frame.width - 60, height: 32)
+
+        myCustomFBLoginButton.delegate = self
+        //myCustomFBLoginButton = FBSDKLoginButton()
         
-        myCustomFBLoginButton = FBSDKLoginButton()
+        
     
         // Resize the Switch button
         if mSwitch_rememberMe != nil {
@@ -68,6 +73,43 @@ class ViewController: UIViewController {
         mLabel_forgotPassword?.addGestureRecognizer(mForgotPasswordTapAction)
     }
     
+    var fbLoginSuccess = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (FBSDKAccessToken.current() != nil && fbLoginSuccess == true)
+        {
+            performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
+        }
+    }
+    
+    
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
+        print("User Logged In")
+        
+        if ((error) != nil) {
+            // Process error
+            print(error)
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+        }
+        else {
+            fbLoginSuccess = true
+             self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+            if result.grantedPermissions.contains("email") {
+                // Do work
+               // performSegue(withIdentifier: "loginSegue", sender: self)
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        self.showAlert(mTitle: "Signed Out", mContent: "You're signed out!")
+    }
+    
     
     @IBAction func signIn(_ sender: UIButton) {
         
@@ -85,11 +127,16 @@ class ViewController: UIViewController {
                         // Save the login instance state to user defaults
                         UserDefaults.standard.set(true, forKey: "isSignedIn")
                         UserDefaults.standard.synchronize()
+                        //performSegue(withIdentifier: String, sender: Any?)
                     }
                     
                     // Perform a segue to the "interests" screen
                     print("You're signed in!")
                     self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
+                    
+                   //performSegue(withIdentifier: emailSignInSucessToMain, sender: Any?)
+                    
+                    
                     
                 } else {
                     
@@ -103,7 +150,8 @@ class ViewController: UIViewController {
             print("Don't leave empty fields")
         }
     }
-    
+
+
     @objc func noAccountTapped(_ sender: UITapGestureRecognizer) {
         
         // When the "create a new account" label is tapped, perform a segue to the sign up screen
@@ -138,6 +186,8 @@ class ViewController: UIViewController {
     }
     
     func isSignedIn() -> Bool {
+        
+       // performSegue(withIdentifier: "emailSignInSucessToMain", sender: self)
         return UserDefaults.standard.bool(forKey: "isSignedIn")
     }
 }
