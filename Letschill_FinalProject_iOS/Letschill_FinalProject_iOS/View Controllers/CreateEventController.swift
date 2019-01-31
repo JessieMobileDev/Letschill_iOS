@@ -83,6 +83,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBAction func saveNewEvent(_ sender: UIButton) {
         
+        performSegue(withIdentifier: "createToExplore", sender: nil)
         storeToDatabase()
         
     }
