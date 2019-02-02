@@ -134,7 +134,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     print("You're signed in!")
                     self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
                     
-                   //performSegue(withIdentifier: emailSignInSucessToMain, sender: Any?)
+                   self.performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
                     
                     
                     

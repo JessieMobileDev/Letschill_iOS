@@ -26,7 +26,6 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var mButton_location: UIImageView!
     @IBOutlet weak var mSwitch_recurring: UISwitch!
     @IBOutlet weak var mSwitch_public: UISwitch!
-    @IBOutlet weak var mTableView_invitations: UITableView!
     
     // Variables
     let mCategories = ["Video Game", "Sports", "Technology", "Outdoor Activities", "Indoor Activities", "Arts", "Music", "Auto"]
@@ -39,6 +38,8 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     var uniqueID: DatabaseReference?
     // for user id
     var UserId: DatabaseReference?
+    
+    var chosenDate: String = ""
 
 //    let date = Date()
 //    let monthString = Date().month
@@ -101,12 +102,41 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        label.text = mCategories[row]
 //    }
-    
+//    @IBOutlet weak var mPicker_category: UIPickerView!
+//    @IBOutlet weak var mImageView_eventImage: UIImageView!
+//    @IBOutlet weak var mTextField_eventName: UITextField!
+//    @IBOutlet weak var mTextField_location: UITextField!
+//    @IBOutlet weak var mTextField_eventDate: UITextField!
+//    @IBOutlet weak var mTextField_startTime: UITextField!
+//    @IBOutlet weak var mTextField_endTime: UITextField!
+//    @IBOutlet weak var mTextField_description: UITextField!
+//    @IBOutlet weak var mTextField_participants: UITextField!
+//    @IBOutlet weak var mButton_location: UIImageView!
+//    @IBOutlet weak var mSwitch_recurring: UISwitch!
+//    @IBOutlet weak var mSwitch_public: UISwitch!
     
     @IBAction func saveNewEvent(_ sender: UIButton) {
         
-        //performSegue(withIdentifier: "createToExplore", sender: nil)
-        storeToDatabase()
+        if mTextField_eventName.text == ""{
+            showAlert((Any).self)
+        }else if mTextField_location.text == ""{
+            showAlert((Any).self)
+        }else if mTextField_eventDate.text == ""{
+            showAlert((Any).self)
+        }else if mTextField_startTime.text == ""{
+            showAlert((Any).self)
+        }else if mTextField_endTime.text == ""{
+            showAlert((Any).self)
+        }else if mTextField_description.text == ""{
+            showAlert((Any).self)
+        }else if mTextField_participants.text == ""{
+            showAlert((Any).self)
+        }else{
+            showAlertCongrats((Any).self)
+            // store function
+            storeToDatabase()
+        }
+        //storeToDatabase()
         
     }
     
@@ -118,11 +148,15 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         // create an unique ID to store each event in the database
         uniqueID = nil
         
+        
+            chosenDate = mTextField_eventDate.text!
+        
+        
         print("DATEEEEEEEEEEEEEEE")
         print(dateP)
         
         if let date = currentMonthInt?.description {
-            uniqueID = ref?.child("Event").child(date).child("month").childByAutoId()
+            uniqueID = ref?.child("Events").child(date).child(chosenDate).childByAutoId()
             
             uniqueID?.child("Title").setValue(mTextField_eventName.text)
             uniqueID?.child("Description").setValue(mTextField_description.text)
@@ -155,21 +189,10 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         //        createdEvent.append(Event(ieventTitle: eventNameField.text, ieventTime: timeTextField.text, ieventLocation: eventLocationField.text, ieventDescription: eventDescField.text, ieventDate: eventDatePicker.description, initId: uniqueID?.key, initUserId: UserId?.key))
         
         // perform segue to pass data between controllers
-        performSegue(withIdentifier: "CreateToView", sender: self)
+       // performSegue(withIdentifier: "CreateToView", sender: self)
     }
     
-    
-    
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
     // show pop up alert
     func showAlert(_ sender: Any) {
         let alertController = UIAlertController(title: "Attention", message:
@@ -179,6 +202,13 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func showAlertCongrats(_ sender: Any) {
+        let alertController = UIAlertController(title: "Congrats!", message:
+            "Event Successfully created!", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     
 }

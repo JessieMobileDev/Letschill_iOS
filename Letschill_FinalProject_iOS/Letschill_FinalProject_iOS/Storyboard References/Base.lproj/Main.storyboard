@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1894" y="1384"/>
+            <point key="canvasLocation" x="-1300" y="1428"/>
         </scene>
         <!--Main Sign In View Controller-->
         <scene sceneID="oa6-6Q-Xje">
@@ -70,7 +70,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signIn:" destination="5d6-bZ-FoW" eventType="touchUpInside" id="bv9-27-R8N"/>
-                                    <segue destination="I4b-11-MFr" kind="custom" identifier="emailSignInSucessToMain" id="GwX-wT-ZNH"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-8J-4is">
@@ -1800,7 +1799,4 @@ Thomas Gerard, Christopher Mouton (confirmed) ….</string>
         <image name="profile" width="36" height="36"/>
         <image name="user_ios" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GwX-wT-ZNH"/>
-    </inferredMetricsTieBreakers>
 </document>
