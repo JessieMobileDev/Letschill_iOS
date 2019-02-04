@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-
+    
     // Outlets
     @IBOutlet weak var mPicker_category: UIPickerView!
     @IBOutlet weak var mImageView_eventImage: UIImageView!
@@ -26,6 +26,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var mButton_location: UIImageView!
     @IBOutlet weak var mSwitch_recurring: UISwitch!
     @IBOutlet weak var mSwitch_public: UISwitch!
+    @IBOutlet weak var saveButton: ButtonHandler!
     
     // Variables
     let mCategories = ["Video Game", "Sports", "Technology", "Outdoor Activities", "Indoor Activities", "Arts", "Music", "Auto"]
@@ -40,10 +41,10 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     var UserId: DatabaseReference?
     
     var chosenDate: String = ""
-
-//    let date = Date()
-//    let monthString = Date().month
-//    //let dateString = Date().
+    
+    //    let date = Date()
+    //    let monthString = Date().month
+    //    //let dateString = Date().
     
     //Here I’m creating the calendar instance that we will operate with:
     let calendar = NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)
@@ -57,19 +58,19 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     let currentYearInt = (NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)?.component(NSCalendar.Unit.year, from: Date()))!
     
     let currentDayInt = (NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)?.component(NSCalendar.Unit.day, from: Date()))!
-
+    
     let dateP = NSDate()
-//     let dateString = Date().month
-//
+    //     let dateString = Date().month
+    //
     var dateFormatter = DateFormatter().dateFormat = "MM-dd-yyyy"
-
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-
+        
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -79,7 +80,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return mCategories[row]
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 0
     }
@@ -99,21 +100,21 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         return label
     }
     
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        label.text = mCategories[row]
-//    }
-//    @IBOutlet weak var mPicker_category: UIPickerView!
-//    @IBOutlet weak var mImageView_eventImage: UIImageView!
-//    @IBOutlet weak var mTextField_eventName: UITextField!
-//    @IBOutlet weak var mTextField_location: UITextField!
-//    @IBOutlet weak var mTextField_eventDate: UITextField!
-//    @IBOutlet weak var mTextField_startTime: UITextField!
-//    @IBOutlet weak var mTextField_endTime: UITextField!
-//    @IBOutlet weak var mTextField_description: UITextField!
-//    @IBOutlet weak var mTextField_participants: UITextField!
-//    @IBOutlet weak var mButton_location: UIImageView!
-//    @IBOutlet weak var mSwitch_recurring: UISwitch!
-//    @IBOutlet weak var mSwitch_public: UISwitch!
+    //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    //        label.text = mCategories[row]
+    //    }
+    //    @IBOutlet weak var mPicker_category: UIPickerView!
+    //    @IBOutlet weak var mImageView_eventImage: UIImageView!
+    //    @IBOutlet weak var mTextField_eventName: UITextField!
+    //    @IBOutlet weak var mTextField_location: UITextField!
+    //    @IBOutlet weak var mTextField_eventDate: UITextField!
+    //    @IBOutlet weak var mTextField_startTime: UITextField!
+    //    @IBOutlet weak var mTextField_endTime: UITextField!
+    //    @IBOutlet weak var mTextField_description: UITextField!
+    //    @IBOutlet weak var mTextField_participants: UITextField!
+    //    @IBOutlet weak var mButton_location: UIImageView!
+    //    @IBOutlet weak var mSwitch_recurring: UISwitch!
+    //    @IBOutlet weak var mSwitch_public: UISwitch!
     
     @IBAction func saveNewEvent(_ sender: UIButton) {
         
@@ -139,6 +140,20 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         //storeToDatabase()
         
     }
+//    
+//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+//        print("segue - \(identifier)")
+//        
+//        if let destinationViewController = segue.destination as? MainTabBarController{
+//            
+//            
+//            if let button = sender as? UIButton {
+//                destinationViewController.buttonIndex = button.tag
+//                // Note: add/define var buttonIndex: Int = 0 in <YourDestinationViewController> and print there in viewDidLoad.
+//            }
+//            
+//        }
+//    }
     
     func storeToDatabase(){
         // set the firebase reference
@@ -149,7 +164,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         uniqueID = nil
         
         
-            chosenDate = mTextField_eventDate.text!
+        chosenDate = mTextField_eventDate.text!
         
         
         print("DATEEEEEEEEEEEEEEE")
@@ -158,16 +173,17 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         if let date = currentMonthInt?.description {
             uniqueID = ref?.child("Events").child(date).child(chosenDate).childByAutoId()
             
-            uniqueID?.child("Title").setValue(mTextField_eventName.text)
-            uniqueID?.child("Description").setValue(mTextField_description.text)
-            uniqueID?.child("Location").setValue(mTextField_location.text)
-            uniqueID?.child("Date").setValue(mTextField_eventDate.text)
-            uniqueID?.child("Start Time").setValue(mTextField_startTime.text)
-            uniqueID?.child("End Time").setValue(mTextField_endTime.text)
-            uniqueID?.child("Participants").setValue(mTextField_participants.text)
-            uniqueID?.child("Category").setValue(mPicker_category.description)
-            uniqueID?.child("isRecurring").setValue(mSwitch_recurring.isOn)
-            uniqueID?.child("isPublicOrPrivate").setValue(mSwitch_public.isOn)
+            
+            uniqueID?.child("mEventName").setValue(mTextField_eventName.text)
+            uniqueID?.child("mDescription").setValue(mTextField_description.text)
+            uniqueID?.child("mEventLocation").setValue(mTextField_location.text)
+            uniqueID?.child("mEventDate").setValue(mTextField_eventDate.text)
+            uniqueID?.child("mEventTimeStart").setValue(mTextField_startTime.text)
+            uniqueID?.child("mEventTimeFinish").setValue(mTextField_endTime.text)
+            uniqueID?.child("mParticipants").setValue(mTextField_participants.text)
+            uniqueID?.child("mCategory").setValue(mPicker_category.description)
+            uniqueID?.child("mIsRecurringEvent").setValue(mSwitch_recurring.isOn)
+            uniqueID?.child("mPublicOrPrivate").setValue(mSwitch_public.isOn)
             
             
             
@@ -180,19 +196,38 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
             }
             
             uniqueID?.child("userId").setValue(uid)
+            
+            
+            mTextField_eventName.text = ""
+            mTextField_location.text = ""
+            
+            mTextField_eventDate.text = ""
+            
+            mTextField_startTime.text = ""
+            
+            mTextField_endTime.text = ""
+            
+            mTextField_description.text = ""
+            
+            mTextField_participants.text = ""
+            
+            //createToExplore
+            
+           
         }
         
         
         
         createdEvent.append(Event(ieventId: uniqueID?.key, ieventName: mTextField_eventName.text, ieventStartTime: mTextField_startTime.text, ieventEndTime: mTextField_endTime.text, ieventLocation: mTextField_location.text, ieventDescription: mTextField_description.text, ieventDate: mTextField_eventDate.description, ieventParticipants: mTextField_participants.text, ieventCategory: mPicker_category.description, ieventIsReccuring: mSwitch_recurring.isOn, ieventPublicOrPrivate: mSwitch_public.isOn))
-//
+        //
         //        createdEvent.append(Event(ieventTitle: eventNameField.text, ieventTime: timeTextField.text, ieventLocation: eventLocationField.text, ieventDescription: eventDescField.text, ieventDate: eventDatePicker.description, initId: uniqueID?.key, initUserId: UserId?.key))
         
         // perform segue to pass data between controllers
-       // performSegue(withIdentifier: "CreateToView", sender: self)
+        // performSegue(withIdentifier: "CreateToView", sender: self)
+         //performSegue(withIdentifier: "createToExplore", sender: self)
     }
     
-
+    
     // show pop up alert
     func showAlert(_ sender: Any) {
         let alertController = UIAlertController(title: "Attention", message:

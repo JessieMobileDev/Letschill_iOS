@@ -11,6 +11,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController
 {
+    var buttonIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
