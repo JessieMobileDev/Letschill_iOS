@@ -137,6 +137,8 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
             // store function
             storeToDatabase()
         }
+        
+        showAlertCongrats(self)
         //storeToDatabase()
         
     }

@@ -96,7 +96,7 @@ class ExploreTableViewController: UIViewController , UITableViewDelegate , UITab
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 150
     }
     
 
@@ -119,6 +119,13 @@ class ExploreTableViewController: UIViewController , UITableViewDelegate , UITab
 
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "toDetailsView", sender: self)
+    }
+    
+    
  
 
     /*

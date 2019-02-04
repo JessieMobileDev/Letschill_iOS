@@ -26,6 +26,7 @@
 		820972FF21B790DF00EEF992 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820972FE21B790DF00EEF992 /* Event.swift */; };
 		8250618E220775FF003BF306 /* ExploreTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8250618D220775FF003BF306 /* ExploreTableTableViewController.swift */; };
 		8250619022077632003BF306 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8250618F22077632003BF306 /* ExploreTableViewCell.swift */; };
+		825061922207CB34003BF306 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825061912207CB34003BF306 /* DetailsViewController.swift */; };
 		826321A022017D060053AC31 /* Attendees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263219F22017D060053AC31 /* Attendees.swift */; };
 		826321A2220264AB0053AC31 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826321A1220264AB0053AC31 /* MainTabBarController.swift */; };
 		826321A4220265220053AC31 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826321A3220265220053AC31 /* NavigationViewController.swift */; };
@@ -57,6 +58,7 @@
 		820972FE21B790DF00EEF992 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8250618D220775FF003BF306 /* ExploreTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableTableViewController.swift; sourceTree = "<group>"; };
 		8250618F22077632003BF306 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
+		825061912207CB34003BF306 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8263219F22017D060053AC31 /* Attendees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendees.swift; sourceTree = "<group>"; };
 		826321A1220264AB0053AC31 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		826321A3220265220053AC31 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				826321A522072D0D0053AC31 /* ProfileViewController.swift */,
 				8250618D220775FF003BF306 /* ExploreTableTableViewController.swift */,
 				8250618F22077632003BF306 /* ExploreTableViewCell.swift */,
+				825061912207CB34003BF306 /* DetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				826321A022017D060053AC31 /* Attendees.swift in Sources */,
 				4C1E6A8D21B84F5B00129DFD /* SignUpController.swift in Sources */,
 				82F54E8921BAD49C00C20803 /* FilterSearchController.swift in Sources */,
+				825061922207CB34003BF306 /* DetailsViewController.swift in Sources */,
 				4C1A865C21D04B450093CB2D /* ButtonHandler.swift in Sources */,
 				826321A622072D0D0053AC31 /* ProfileViewController.swift in Sources */,
 				826321A4220265220053AC31 /* NavigationViewController.swift in Sources */,
@@ -485,7 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6X5B64HR8X;
+				DEVELOPMENT_TEAM = MYLQWYYN25;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -512,7 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6X5B64HR8X;
+				DEVELOPMENT_TEAM = MYLQWYYN25;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
