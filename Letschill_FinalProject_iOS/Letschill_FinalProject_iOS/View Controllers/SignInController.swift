@@ -128,6 +128,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         UserDefaults.standard.set(true, forKey: "isSignedIn")
                         UserDefaults.standard.synchronize()
                         //performSegue(withIdentifier: String, sender: Any?)
+                        self.performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
                     }
                     
                     // Perform a segue to the "interests" screen
