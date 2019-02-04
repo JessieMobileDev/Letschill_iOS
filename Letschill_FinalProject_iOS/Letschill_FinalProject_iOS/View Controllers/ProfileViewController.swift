@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController{
         profileImage.layer.masksToBounds = false
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.clipsToBounds = true
-        profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.borderColor = UIColor.blue.cgColor
         
     }
 }

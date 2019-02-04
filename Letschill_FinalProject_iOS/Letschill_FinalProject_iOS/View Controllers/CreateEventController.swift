@@ -70,7 +70,14 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.mTextField_eventName.delegate = self
+        self.mTextField_location.delegate = self
+        self.mTextField_eventDate.delegate = self
+        self.mTextField_startTime.delegate = self
+        self.mTextField_endTime.delegate = self
+        self.mTextField_description.delegate = self
+        self.mTextField_participants.delegate = self
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -100,21 +107,21 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         return label
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        mTextField_participants.resignFirstResponder()
+        mTextField_eventName.resignFirstResponder()
+        mTextField_location.resignFirstResponder()
+        mTextField_eventDate.resignFirstResponder()
+        mTextField_description.resignFirstResponder()
+        mTextField_startTime.resignFirstResponder()
+        mTextField_endTime.resignFirstResponder()
+        return true
+    }
+    
     //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     //        label.text = mCategories[row]
     //    }
-    //    @IBOutlet weak var mPicker_category: UIPickerView!
-    //    @IBOutlet weak var mImageView_eventImage: UIImageView!
-    //    @IBOutlet weak var mTextField_eventName: UITextField!
-    //    @IBOutlet weak var mTextField_location: UITextField!
-    //    @IBOutlet weak var mTextField_eventDate: UITextField!
-    //    @IBOutlet weak var mTextField_startTime: UITextField!
-    //    @IBOutlet weak var mTextField_endTime: UITextField!
-    //    @IBOutlet weak var mTextField_description: UITextField!
-    //    @IBOutlet weak var mTextField_participants: UITextField!
-    //    @IBOutlet weak var mButton_location: UIImageView!
-    //    @IBOutlet weak var mSwitch_recurring: UISwitch!
-    //    @IBOutlet weak var mSwitch_public: UISwitch!
+
     
     @IBAction func saveNewEvent(_ sender: UIButton) {
         
@@ -142,21 +149,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         //storeToDatabase()
         
     }
-//    
-//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        print("segue - \(identifier)")
-//        
-//        if let destinationViewController = segue.destination as? MainTabBarController{
-//            
-//            
-//            if let button = sender as? UIButton {
-//                destinationViewController.buttonIndex = button.tag
-//                // Note: add/define var buttonIndex: Int = 0 in <YourDestinationViewController> and print there in viewDidLoad.
-//            }
-//            
-//        }
-//    }
-    
+
     func storeToDatabase(){
         // set the firebase reference
         ref = Database.database().reference()
@@ -221,12 +214,7 @@ class CreateEventController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         
         createdEvent.append(Event(ieventId: uniqueID?.key, ieventName: mTextField_eventName.text, ieventStartTime: mTextField_startTime.text, ieventEndTime: mTextField_endTime.text, ieventLocation: mTextField_location.text, ieventDescription: mTextField_description.text, ieventDate: mTextField_eventDate.description, ieventParticipants: mTextField_participants.text, ieventCategory: mPicker_category.description, ieventIsReccuring: mSwitch_recurring.isOn, ieventPublicOrPrivate: mSwitch_public.isOn))
-        //
-        //        createdEvent.append(Event(ieventTitle: eventNameField.text, ieventTime: timeTextField.text, ieventLocation: eventLocationField.text, ieventDescription: eventDescField.text, ieventDate: eventDatePicker.description, initId: uniqueID?.key, initUserId: UserId?.key))
-        
-        // perform segue to pass data between controllers
-        // performSegue(withIdentifier: "CreateToView", sender: self)
-         //performSegue(withIdentifier: "createToExplore", sender: self)
+    
     }
     
     

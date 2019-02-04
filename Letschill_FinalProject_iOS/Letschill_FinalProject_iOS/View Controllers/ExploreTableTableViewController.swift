@@ -89,6 +89,16 @@ class ExploreTableViewController: UIViewController , UITableViewDelegate , UITab
         }
     }
     
+    //performSegue(withIdentifier: "toDetailsView", sender: self)
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toDetailsView" {
+//            // Setup new view controller
+//
+//            GetFirebaseData()
+//        }
+//    }
+    
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
