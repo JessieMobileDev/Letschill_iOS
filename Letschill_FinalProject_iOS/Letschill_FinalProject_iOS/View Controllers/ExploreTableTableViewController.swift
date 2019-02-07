@@ -89,6 +89,14 @@ class ExploreTableViewController: UIViewController , UITableViewDelegate , UITab
         }
     }
     
+    
+    var index = 0;
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVc = segue.destination as? DetailsViewController
+        destinationVc?.event = eventList[index]
+    }
+    
     //performSegue(withIdentifier: "toDetailsView", sender: self)
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -120,7 +128,7 @@ class ExploreTableViewController: UIViewController , UITableViewDelegate , UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIDExplore", for: indexPath) as? ExploreTableViewCell
 
-        var event: Event = eventList[indexPath.row]
+        let event: Event = eventList[indexPath.row]
         
         cell?.title.text = event.eventName
         cell?.timeDate.text = event.eventTimeStart
@@ -131,10 +139,17 @@ class ExploreTableViewController: UIViewController , UITableViewDelegate , UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if segue.identifier == "segue" {
+//            // Setup new view controller
+//        }
         
+        index = indexPath.row
         performSegue(withIdentifier: "toDetailsView", sender: self)
     }
-    
+
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
  
 

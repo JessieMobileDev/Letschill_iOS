@@ -26,10 +26,20 @@ class DetailsViewController: UIViewController{
     var refHandle: DatabaseHandle?
     // array to use the objects and store in
     var eventList: [Event] = []
+    var event:Event?
     
     override func viewDidLoad() {
         //code
-        GetFirebaseData()
+        //GetFirebaseData()
+        if (event != nil) {
+            self.dEventNameField.text = event?.eventName
+            self.dDateTimeField.text = event?.eventTimeStart
+            self.dLocField.text = event?.eventLocation
+            // self.dHostField.text =
+            self.dDescField.text = event?.eventDescription
+            self.dPartField.text = event?.participants
+            self.dCategoryField.text = event?.category
+        }
     }
     
     
@@ -75,13 +85,7 @@ class DetailsViewController: UIViewController{
                     self.eventList.append(Event(ieventId: eventId, ieventName: title, ieventStartTime: time, ieventEndTime: time, ieventLocation: location, ieventDescription: desc, ieventDate: date, ieventParticipants: part, ieventCategory: cate, ieventIsReccuring: true, ieventPublicOrPrivate: true))
                     
                     // assign it to labels to update UI
-                    self.dEventNameField.text = title
-                    self.dDateTimeField.text = time
-                    self.dLocField.text = location
-                   // self.dHostField.text =
-                    self.dDescField.text = desc
-                    self.dPartField.text = part
-                    self.dCategoryField.text = cate
+                    
                     
                     
                 }

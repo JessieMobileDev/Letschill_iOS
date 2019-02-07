@@ -926,7 +926,6 @@
                                                     <outlet property="location" destination="InX-vH-oKo" id="CPk-j4-ASa"/>
                                                     <outlet property="timeDate" destination="MhG-t7-aqg" id="oIy-e9-104"/>
                                                     <outlet property="title" destination="rQB-Zx-OEs" id="vhv-Px-LTV"/>
-                                                    <segue destination="KGO-xB-Gsb" kind="showDetail" identifier="toDetailsView" id="5k8-JQ-Odt"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -964,6 +963,7 @@
                     <navigationItem key="navigationItem" id="chw-6B-QTn"/>
                     <connections>
                         <outlet property="tableView" destination="1sG-PL-etH" id="acg-9J-BBJ"/>
+                        <segue destination="KGO-xB-Gsb" kind="show" identifier="toDetailsView" id="iH6-GY-t0t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QW3-U2-iLY" userLabel="First Responder" sceneMemberID="firstResponder"/>

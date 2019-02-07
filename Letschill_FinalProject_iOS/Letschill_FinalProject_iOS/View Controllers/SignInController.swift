@@ -80,6 +80,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         {
             performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
         }
+        
     }
     
     
@@ -97,6 +98,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         else {
             fbLoginSuccess = true
              self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
+             self.performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email") {
@@ -121,7 +123,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
                 // If successful, check if createdUser is not nil
                 if createdUser != nil {
+                    self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
                     
+                    self.performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
+
                     if self.mSwitch_rememberMe.isOn {
                         
                         // Save the login instance state to user defaults
@@ -136,7 +141,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     self.showAlert(mTitle: "Signed In", mContent: "You're signed in!")
                     
                    self.performSegue(withIdentifier: "moveToMainScreenIdentifier", sender: self)
-                    
+
                     
                     
                 } else {
